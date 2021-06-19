@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="conteiner header">
+        <div class="conteiner header-conteiner">
         <nav class="nav">
             <a class="logo" href="index.html"><span class="web">Web</span><span class="studio">Studio</span></a>
             <ul class="menu-list">
@@ -38,7 +38,12 @@
         <section class="hero section hero-foto">
         <div class="conteiner">
             <h1 class="hero-text">ЭФФEКТИВНЫЕ РЕШЕНИЯ<br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-            <button class="hero-button" type="button">Заказать услугу</button>
+            <button data-modal-open class="hero-button" type="button">Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="close-button" data-modal-close><img src="images/close.svg" width="30" height="30" alt="Закрыть"></button>
+                </div>
+            </div>
         </div>
         </section>
         <section class="section">
@@ -88,18 +93,24 @@
             <div class="conteiner">
             <h2 class="second-title">Чем мы занимаемся</h2>
             <ul class="second-list">
-                <li class="img-two"><img src="images/codding.jpg" alt="codding" width=370></li>
-                <div class="img-two-overlay">
-                    <p class="img-overlay-text"> ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                <li class="img-two">
+                <div class="img-two-section">
+                    <img src="images/codding.jpg" alt="codding" width=370>
+                    <p class="img-two-overlay">Декстопные приложения</p>
                 </div>
-                <li class="img-two"><img src="images/adaptate.jpg" alt="codding" width=370></li>
-                <div>
-
+            </li>
+                <li class="img-two">
+                    <div class="img-two-section">
+                    <img src="images/adaptate.jpg" alt="codding" width=370>
+                <p class="img-two-overlay">Мобильные приложения</p>
                 </div>
-                <li class="img-two" ><img src="images/disign.jpg" alt="design" width=370></li>
-                <div>
-
+            </li>
+                <li class="img-two">
+                    <div class="img-two-section">
+                    <img src="images/disign.jpg" alt="design" width=370>
+                <p class="img-two-overlay">Дизайнерские решения</p>
                 </div>
+            </li>
             </ul> 
         </div>      
         </section>
@@ -355,6 +366,7 @@
         </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
 
