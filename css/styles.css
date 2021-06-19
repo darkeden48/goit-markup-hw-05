@@ -88,6 +88,10 @@ body{
 .contacts-list .contact-item:last-child{
     margin-left: 30px;
  }
+ .logo{
+    padding-top: 24px;
+    padding-bottom: 25px;
+ }
  .web, .studio{
     font-family: Raleway;
     font-weight: bold;
@@ -191,6 +195,7 @@ margin-top: 9px;
 }
 .conteiner-position{
     display: flex;
+    align-items: baseline;
 }
 .icon-footer-info{
     display: flex;
@@ -217,7 +222,6 @@ background-color: var(--animation-bottons);
 cursor: pointer;
 }
 .join-place{
-    margin-top: 15px;
     margin-left: 70px;
 }
 .icon-footer-info .icon-list-footer:not(:last-child){
@@ -246,9 +250,11 @@ cursor: pointer;
     margin-left: auto;
     margin-right: auto;
     background-position: center;
-    background-image: url("../images/background-hero.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4));
-}
+    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/background-hero.jpg");
+	background-blend-mode: screen;
+	background-size: cover;
+ }
  .hero{
      background-color: var(--background-hero);
      color: var(--hero-color);
@@ -281,7 +287,9 @@ cursor: pointer;
      justify-content: center;
      margin: auto;
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+     border:0;
+     border-radius: 4px;
+    }
 .backdrop{
     position: fixed;
     top: 0;
@@ -329,7 +337,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .icon-background{
     display: flex;
     justify-content: center;
-    padding: 25px 100px;
+    align-items: center;
+    width: 270px;
+    height: 120px;
     margin-bottom: 30px;
     background-color: var(--icon-background);
     border-radius: 4px;
@@ -409,10 +419,15 @@ color: var(--text-color);
  }
 .clients-icon{
 display: flex;
+width: 170px;
+ height: 92px;
 }
 .element-client{
  display: flex;
- padding: 16px 32px;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 100%;
  border: 1px solid var(--icon-names-color);
  border-radius: 4px;
  cursor: pointer;
